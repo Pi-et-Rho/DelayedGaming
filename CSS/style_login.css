@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --background-color: #c9d6ff;
+    --background-color: #081B29;
+    --color-orange: #ce2100;
+    --color-violet: #8a2be2;
 }
 
 * {
@@ -13,7 +15,6 @@
 
 body {
     background-color: var(--background-color);
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,9 +28,9 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
+    width: 1000px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 600px;
 }
 
 .container p {
@@ -169,9 +170,8 @@ body {
 }
 
 .toggle {
-    background-color: #c92b0f;
     height: 100%;
-    background: linear-gradient(to right, #7f0b0f, #ffeb09);
+    background: linear-gradient(to right, var(--color-orange), var(--color-violet));
     color: white;
     position: relative;
     left: -100%;
