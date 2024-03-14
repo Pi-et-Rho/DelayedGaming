@@ -1,0 +1,272 @@
+/* FONT */
+/* Orbitron (h1, h2, ...) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+/* Roboto (used for the rest of text) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* ROOT */
+:root {
+    /* Color Definitions */
+    --color-background: #081B29;
+    --color-black: #222222;
+    --color-white: #F2F2F2;
+    --color-gray: #808080;
+    --color-orange: #ce2100;
+    --color-blue: #00d9ff;
+    --color-violet: #8a2be2;
+    /* Font-size Definitions */
+    --font-size-logo: 30px;
+    --font-size-menu: 20px;
+    --font-size-h1: 30px;
+    --font-size-h2: 25px;
+    --font-size-text: 18px;
+}
+
+/* SET UP CONSTANTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* BODY */
+body {
+    background: var(--color-background);
+    color: var(--color-white);
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+}
+
+.logo {
+    font-size: var(--font-size-logo);
+    color: var(--color-white);
+}
+
+.logo span {
+    color: var(--color-orange);
+    font-weight: 600;
+    transition: .2s;
+}
+
+.navbar a {
+    font-size: var(--font-size-menu);
+    color: var(--color-white);
+    font-weight: 500;
+    margin-left: 2.5rem;
+    padding: 2rem 0 2rem 0;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar .active {
+    color: var(--color-orange);
+}
+
+
+/* presentation */
+.presentation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10% 9rem;
+}
+
+.galery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.full-image {
+    position: relative;
+}
+
+.full-image img {
+    width: 550px;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.full-image:hover .overlay {
+    opacity: 1;
+}
+
+.thumb-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.thumb-bar img {
+    width: 150px;
+    height: auto;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.thumb-bar img:hover {
+    opacity: 0.7;
+}
+
+
+.description {
+    position: relative;
+    width: 500px;
+}
+
+.description p {
+    margin-bottom: 50px;
+}
+
+.description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.description li {
+    margin-bottom: 5px;
+}
+
+.btn-container {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+    height: 3rem;
+}
+
+.btn-container .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    height: 100%;
+}
+
+.btn-container .btn a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .3s;
+    z-index: 1;
+}
+
+.btn-container .btn a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(33deg) translateX(0);
+    transition: 0.3s;
+}
+
+.btn-container .btn:hover a::before {
+    transform: skewX(45deg) translateX(190%);
+}
+
+.btn-container .btn::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
+    transition: .3s;
+    transition-delay: 0s;
+}
+
+.btn-container .btn:hover::before {
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    transition-delay: .1s;
+}
+
+.btn-container .btn:hover::after {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+}
+
+.btn-container .btn:nth-child(1)::before,
+.btn-container .btn:nth-child(1)::after {
+    background: var(--color-violet);
+    box-shadow: 0 0 15px var(--color-violet),
+        0 0 15px var(--color-violet),
+        0 0 15px var(--color-violet),
+        0 0 15px var(--color-violet);
+}
+
+.btn-container .btn:nth-child(2)::before,
+.btn-container .btn:nth-child(2)::after {
+    background: var(--color-orange);
+    box-shadow: 0 0 15px var(--color-orange),
+        0 0 15px var(--color-orange),
+        0 0 15px var(--color-orange),
+        0 0 15px var(--color-orange);
+}
