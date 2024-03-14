@@ -1,0 +1,342 @@
+/* FONT */
+/* Orbitron (h1, h2, ...) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+/* Roboto (used for the rest of text) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* ROOT */
+:root {
+    /* Color Definitions */
+    --color-background: #081B29;
+    --color-black: #222222;
+    --color-white: #F2F2F2;
+    --color-gray: #808080;
+    --color-orange: #ce2100;
+    --color-blue: #00d9ff;
+    --color-violet: #8a2be2;
+    /* Font-size Definitions */
+    --font-size-logo: 30px;
+    --font-size-menu: 20px;
+    --font-size-h1: 30px;
+    --font-size-h2: 25px;
+    --font-size-text: 18px;
+}
+
+/* SET UP CONSTANTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* BODY */
+body {
+    background: var(--color-background);
+    color: var(--color-white);
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+}
+
+.logo {
+    font-size: var(--font-size-logo);
+    color: var(--color-white);
+}
+
+.logo span {
+    color: var(--color-orange);
+    font-weight: 600;
+    transition: .2s;
+}
+
+.navbar a {
+    font-size: var(--font-size-menu);
+    color: var(--color-white);
+    font-weight: 500;
+    margin-left: 2.5rem;
+    padding: 2rem 0 2rem 0;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar .active {
+    color: var(--color-orange);
+}
+
+
+/* MAIN */
+.article {
+    height: auto;
+    margin: 10% 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.article .add-remove {
+    font-size: var(--font-size-logo);
+    display: flex;
+}
+
+.article .add-remove p {
+    margin: 0 50px 0 0;
+    font-size: var(--font-size-logo);
+}
+
+.article .add-remove a {
+    padding: 0 10px;
+}
+
+.article .add-remove a:nth-child(1) {
+    color: #1ebd73;
+}
+
+.article .add-remove a:nth-child(2) {
+    color: var(--color-orange);
+}
+
+/* Section Categories */
+.Categories {
+    padding: 0 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    min-height: 100vh;
+}
+
+.Categories h2 {
+    position: absolute;
+    top: 200px;
+    font-size: var(--font-size-h1);
+}
+
+.Categories h2::before {
+    content: '';
+    position: absolute;
+    margin-top: 40px;
+    background-color: var(--color-orange);
+    border-radius: 10px;
+    height: 4px;
+    width: 33%;
+}
+
+.Categories .container {
+    margin: 400px 0 200px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.Categories .container .box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 253px;
+    width: 500px;
+    margin: 30px 10px;
+    border-radius: 10px;
+}
+
+.Categories .container .box:nth-child(1) {
+    background-image: url(Images/GameType/Action/BackgroundCombat.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Categories .container .box:nth-child(2) {
+    background-image: url(Images/GameType/Arcade/BackgroundArcade.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Categories .container .box:nth-child(3) {
+    background-image: url(Images/GameType/Aventure/BackgroundAventure.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Categories .container .box:nth-child(4) {
+    background-image: url(Images/GameType/Combat/BackgroundCombat.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Categories .container .box:nth-child(5) {
+    background-image: url(Images/GameType/FPS/BackgroundFPS.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Categories .container .box:nth-child(6) {
+    background-image: url(Images/GameType/JeuxSolo/BackgroundJeuxSolo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Categories .container .box:nth-child(7) {
+    background-image: url(Images/GameType/RPG/BackgroundRPG.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Categories .container .box:nth-child(8) {
+    background-image: url(Images/GameType/Stratégie/BackgroundStrategie.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Categories .container .box:nth-child(9) {
+    background-image: url(Images/GameType/VR/BackgroundVR.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Categories .container .box img {
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    transition: .3s;
+}
+
+.Categories .container .box:nth-child(1) img {
+    width: 265px;
+}
+
+.Categories .container .box:nth-child(1):hover img {
+    width: 275px;
+}
+
+.Categories .container .box:nth-child(2) img {
+    width: 220px;
+}
+
+.Categories .container .box:nth-child(2):hover img {
+    width: 230px;
+}
+
+.Categories .container .box:nth-child(3) img {
+    width: 185px;
+}
+
+.Categories .container .box:nth-child(3):hover img {
+    width: 195px;
+}
+
+.Categories .container .box:nth-child(4) img {
+    width: 250px;
+}
+
+.Categories .container .box:nth-child(4):hover img {
+    width: 260px;
+}
+
+.Categories .container .box:nth-child(5) img {
+    width: 400px;
+}
+
+.Categories .container .box:nth-child(5):hover img {
+    width: 410px;
+}
+
+.Categories .container .box:nth-child(6) img {
+    width: 205px;
+}
+
+.Categories .container .box:nth-child(6):hover img {
+    width: 215px;
+}
+
+.Categories .container .box:nth-child(7) img {
+    width: 230px;
+}
+
+.Categories .container .box:nth-child(7):hover img {
+    width: 240px;
+}
+
+.Categories .container .box:nth-child(8) img {
+    width: 270px;
+}
+
+.Categories .container .box:nth-child(8):hover img {
+    width: 280px;
+}
+
+.Categories .container .box:nth-child(9) img {
+    width: 235px;
+}
+
+.Categories .container .box:nth-child(9):hover img {
+    width: 245px;
+}
+
+.Categories .container .box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 220px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    color: var(--color-white);
+    font-weight: 400;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    margin-right: 40px;
+    transition: .3s;
+    z-index: 1;
+}
+
+.Categories .container .box a:hover {
+    background: var(--color-orange);
+    box-shadow: 0 15px 35px rgba(204, 65, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    font-weight: 600;
+}
