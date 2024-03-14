@@ -101,3 +101,25 @@ header {
     align-items: center;
     justify-content: space-around;
 }
+
+.article .add-remove {
+    font-size: var(--font-size-logo);
+    display: flex;
+}
+
+.article .add-remove p {
+    margin: 0 50px 0 0;
+    font-size: var(--font-size-logo);
+}
+
+.article .add-remove a {
+    padding: 0 10px;
+}
+
+.article .add-remove a:nth-child(1) {
+    color: #1ebd73;
+}
+
+.article .add-remove a:nth-child(2) {
+    color: var(--color-orange);
+}

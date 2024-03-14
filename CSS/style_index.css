@@ -355,6 +355,7 @@ header {
 
 /* Section Trends */
 .games {
+    margin-top: 100px;
     height: 100vh;
     padding: 2% 9rem;
 }
@@ -405,4 +406,12 @@ header {
     padding: 50px;
     align-items: center;
     justify-content: center;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #06141d;
 }
