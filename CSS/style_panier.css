@@ -1,0 +1,103 @@
+/* FONT */
+/* Orbitron (h1, h2, ...) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+/* Roboto (used for the rest of text) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* ROOT */
+:root {
+    /* Color Definitions */
+    --color-background: #081B29;
+    --color-black: #222222;
+    --color-white: #F2F2F2;
+    --color-gray: #808080;
+    --color-orange: #ce2100;
+    --color-blue: #00d9ff;
+    --color-violet: #8a2be2;
+    /* Font-size Definitions */
+    --font-size-logo: 30px;
+    --font-size-menu: 20px;
+    --font-size-h1: 30px;
+    --font-size-h2: 25px;
+    --font-size-text: 18px;
+}
+
+/* SET UP CONSTANTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* BODY */
+body {
+    background: var(--color-background);
+    color: var(--color-white);
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+}
+
+.logo {
+    font-size: var(--font-size-logo);
+    color: var(--color-white);
+}
+
+.logo span {
+    color: var(--color-orange);
+    font-weight: 600;
+    transition: .2s;
+}
+
+.navbar a {
+    font-size: var(--font-size-menu);
+    color: var(--color-white);
+    font-weight: 500;
+    margin-left: 2.5rem;
+    padding: 2rem 0 2rem 0;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar .active {
+    color: var(--color-orange);
+}
+
+
+/* MAIN */
+.article {
+    height: auto;
+    margin: 10% 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
